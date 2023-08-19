@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Manrope:wght@800&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.theme1{
+    --bg-primary: hsl(222, 26%, 31%);
+    --bg-secondary:hsl(223, 31%, 20%);
+    --bg-screen:hsl(224, 36%, 15%);
+    --key-background:hsl(30, 25%, 89%);
+    --bigkey-equals: hsl(6, 63%, 50%);
+    --bigkey-reset: lightblue;
+    --text-primary:hsl(221, 14%, 31%);
+    --text-secondary:hsl(0, 0%, 100%);
+    --key-shadow:hsl(28, 16%, 65%);
+    --rekey-shadow:hsl(224, 28%, 35%);
+    --eqkey-shadow:hsl(6, 70%, 34%);
+}
+.theme2{
+    --bg-primary: hsl(0, 0%, 90%);
+    --bg-secondary:hsl(0, 5%, 81%);
+    --bg-screen:hsl(0, 0%, 93%);
+    --key-background:hsl(45, 7%, 89%);
+    --bigkey-equals:  hsl(25, 98%, 40%);
+    --bigkey-reset:hsl(185, 42%, 37%);
+    --text-primary:hsl(60, 10%, 19%);
+    --text-secondary:hsl(60, 10%, 19%);
+    --key-shadow:hsl(35, 11%, 61%);
+    --rekey-shadow: hsl(185, 58%, 25%);
+    --eqkey-shadow:hsl(25, 99%, 27%);
+}
+.theme3{
+    --bg-primary:hsl(268, 75%, 9%);
+    --bg-secondary:hsl(268, 71%, 12%);
+    --bg-screen:hsl(268, 71%, 12%);
+    --key-background:hsl(268, 47%, 21%);
+    --bigkey-equals: hsl(176, 100%, 44%);
+    --bigkey-reset: hsl(281, 89%, 26%);
+    --text-primary:hsl(52, 100%, 62%);
+    --text-secondary:hsl(52, 100%, 62%);
+    --key-shadow:hsl(290, 70%, 36%);
+    --rekey-shadow:hsl(285, 91%, 52%);
+    --eqkey-shadow: hsl(177, 92%, 70%);
+}
+html{
+    font-size:62.5%;
+}
+body{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:var(--bg-primary);
+    font-family: 'League Spartan', sans-serif;
+}
+
+.box{
+    max-width:400px;
+    width:90%;
+    height:500px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+.headings{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:1.8rem;
+    color:var(--text-secondary);
+}
+.themes{
+    width:70px;
+    height:20px;
+    border-radius:15px;
+    background:var(--bg-secondary);
+    outline:none;
+    border:none;
+}
+.circle{
+   width:15px;
+   height:80%;
+   margin:2px;
+   border-radius:50%;
+   background:var(--bigkey-equals);
+   transition: transform 0.5s ease;
+}
+.button
+.content{
+    display:flex;
+    flex-direction:column;
+}
+.spans{
+    display:flex;
+    justify-content:space-around;
+    margin-bottom:2px;
+}
+.spans span{
+    font-size:1.2rem;
+    color:var(--text-secondary);
+}
+.display{
+    width:100%;
+    height:100px;
+    background:lightblue;
+    border-radius:10px;
+    text-align:right;
+    font-size:5rem;
+    padding-right:1rem;
+    outline:none;
+    border:none;
+    background:var(--bg-screen);
+    color:var(--text-secondary);
+}
+.keypad{
+    height:65%;
+    width:100%;
+    border-radius:10px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr) ;
+    gap:20px;
+    padding:15px;
+    background:var(--bg-secondary);
+
+
+}
+.keypad button{
+    outline:none;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:700;
+    font-size:2.5rem;
+    background:var(--key-background);
+    color:var(--text-primary);
+    transition: box-shadow 0.3s ease;
+}
+.keypad button:hover {
+    box-shadow: 0 10px 10px var(--key-shadow);
+  }
+.keypad button.reset,
+.keypad button.del
+{
+    transition: box-shadow 0.3s ease;
+    background:var(--bigkey-reset);
+}
+.keypad button.reset:hover,
+.keypad button.del:hover{
+    box-shadow: 0 10px 10px var(--rekey-shadow);
+}
+
+.keypad button.equals{
+    background:var(--bigkey-equals);
+    transition: box-shadow 0.3s ease;
+}
+.keypad button.equals:hover{
+    box-shadow: 0 10px 10px var(--eqkey-shadow);
+}
+.keypad button.bigbtn{
+    grid-column:span 2;
+    padding:5px;
+}
+
+
+
+
